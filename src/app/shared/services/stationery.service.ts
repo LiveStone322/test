@@ -12,7 +12,7 @@ export class StationeryService {
 
   public edit$ = new Subject<StationeryModel>();
 
-  private uri = 'http://localhost:4000';
+  private uri = 'https://web-app-backend.herokuapp.com';
 
   constructor(private http: HttpClient, private _snackBar: MatSnackBar) { }
 
