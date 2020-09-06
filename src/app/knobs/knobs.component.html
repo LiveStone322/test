@@ -1,0 +1,51 @@
+<div class="panel">
+  <form>
+    <div class="row d-flex justify-content-center">
+      <mat-form-field class="col-11 col-md-10">
+        <mat-label>Название канцтовара</mat-label>
+        <input 
+          matInput 
+          [formControl]="nameControl" 
+          [errorStateMatcher]="matcher"
+          [placeholder]="placeholderName"
+        >
+        <mat-error *ngIf="costControl.hasError('required')">
+          Название <strong>обязательно</strong>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-11 col-md-10">
+        <mat-label>Цена (руб)</mat-label>
+        <input
+         matInput 
+         [formControl]="costControl" 
+         [errorStateMatcher]="matcher"
+         [placeholder]="placeholderCost" 
+        >
+        <mat-error *ngIf="costControl.hasError('pattern') && !costControl.hasError('required')">
+          Введите значение в виде <strong>0.00</strong>
+        </mat-error>
+        <mat-error *ngIf="costControl.hasError('required')">
+          Цена <strong>обязательна</strong>
+        </mat-error>
+      </mat-form-field>  
+    </div>
+    <div class="row d-flex justify-content-center">
+      <button 
+        mat-raised-button 
+        color="primary" 
+        [disabled]="!isButtonActive()" 
+        (click)="createOrUpdate()"
+      >
+        {{isEditing ? 'Обновить' : 'Создать'}}
+      </button>
+      <button 
+        mat-button 
+        color="primary" 
+        (click)="cancelEdit()"
+      >
+        Отменить
+      </button>
+    </div>
+  </form>
+</div>
+

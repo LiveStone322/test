@@ -1,0 +1,16 @@
+<div class="row panel">
+  <div class="panel__name col-9 col-sm-7 align-self-center">
+    {{name}}
+  </div>
+  <div class="panel__cost col-3 col-sm-3 align-self-center">
+    {{cost}} р.
+  </div>
+  <div class="panel__buttons ml-auto  align-self-center mr-auto mr-sm-0">
+    <button mat-mini-fab color="primary" aria-label="Update" (click)="onEditClick()">
+      <mat-icon>edit</mat-icon>
+    </button>  
+    <button mat-mini-fab color="warn" aria-label="Delete" (click)="onDeleteClick()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>
