@@ -23,12 +23,9 @@ export class AppComponent implements OnInit, OnDestroy{
   }
 
   updateList() {
-    try {
+
       setTimeout(() => this.items = this.ss.read().pipe(map((x: {obj: StationeryModel[]}) => <StationeryModel[]>(x.obj))), 10);
-    }
-    catch(error) {
-      this.ss.openSnackBar(error);
-    }
+
   }
 
   trackByFn(index: number, el: StationeryModel) {
