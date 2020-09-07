@@ -13,7 +13,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     - Перейти в директорию api `cd api`
     - Запустить сервер `npm run server`
 - Frontend
-    - Перейти в корневую папку `cd ../`
+    - В новом терминале открыть корневую папку
     - Запустить сервер `npm run start:prod`
 
 Backend доступен по адресу **localhost:4000**, Frontend по адресу **localhost:5000**
