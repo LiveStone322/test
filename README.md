@@ -11,6 +11,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Запуск
 - Backend
     - Перейти в директорию api `cd api`
+    - Установить зависимости при помощи `npm ci`
     - Запустить сервер `npm run server`
 - Frontend
     - В новом терминале открыть корневую папку
